@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# Generated vector database
+app/vectorstore/
+
+# Uploaded files
+app/uploads/
+
+# Database
+*.sqlite3
+
+# Logs
+*.log
