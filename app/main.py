@@ -1,7 +1,6 @@
 from pathlib import Path
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from services.analysis import analyze_resume_against_job
@@ -20,15 +19,6 @@ JOB_UPLOAD_DIR.mkdir(exist_ok=True)
 VECTORSTORE_DIR.mkdir(exist_ok=True)
 
 app = FastAPI(title="Resume RAG Assistant")
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
 
 class AskRequest(BaseModel):
     question: str = Field(..., min_length=1)
