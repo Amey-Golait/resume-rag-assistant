@@ -4,4 +4,3 @@ chromadb
 pypdf
 python-multipart
 httpx
-streamlit
